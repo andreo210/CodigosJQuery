@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+           
+            //para criar um array de json coloque ele entre chaves
+            var employeesJSON = [
+                {
+                "firstName": "Todd",
+                "lastName": "Grover",
+                "gender": "Male",
+                "salary": 50000
+                },
+                {
+                "firstName": "Sara",
+               "lastName": "Baker",
+               "gender": "Female",
+                "salary": 40000
+               }];
+               
+             // criando JSON object
+            var funcionarioJSON = {
+                "firstName": "Todd",
+                "lastName": "Grover",
+                "gender": "Male",
+                "salary": 50000
+            };
+
+            // acessando os dados do json
+            var result = '';
+            result += 'First Name = ' + funcionarioJSON.firstName + '<br/>';
+            result += 'Last Name = ' + funcionarioJSON.lastName + '<br/>';
+            result += 'Gender = ' + funcionarioJSON.gender + '<br/>';
+            result += 'Salary = ' + funcionarioJSON.salary + '<br/>';
+
+            $('#resultDiv').html(result);
+        });
+    </script>
+</head>
+<body style="font-family:Arial">
+    <div id="resultDiv"></div>
+</body>
+</html>

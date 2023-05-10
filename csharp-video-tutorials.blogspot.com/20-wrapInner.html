@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title></title>
+    <style>
+        .containerDiv {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            margin: 5px;
+        }
+    </style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+            $('div').wrapInner('<div class="containerDiv"></div>');//Envolve uma estrutura HTML em torno do conteúdo de cada elemento no conjunto de elementos correspondentes.
+        });
+    </script>
+</head>
+<body style="font-family:Arial">
+    <div id="div1">
+        DIV 1
+    </div>
+    <div id="div2">
+        DIV 2
+    </div>
+    <div id="div3">
+        DIV 3
+    </div>
+</body>
+</html>

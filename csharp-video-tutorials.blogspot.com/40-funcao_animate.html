@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //A função Animate tem 4 parâmetros. Apenas o primeiro parâmetro (propriedades) 
+            //é o parâmetro obrigatório
+
+            $('#myButton').click(function () {
+                $('#myDiv').animate({ 'font-size': '50' }, 2000);
+            });
+        });
+    </script>
+</head>
+<body style="font-family:Arial">
+    <input type="button" id="myButton" value="Animate" />
+    <br /><br />
+    <div id="myDiv">
+        Função animate()
+    </div>
+</body>
+</html>

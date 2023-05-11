@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var lastScrollTop = 0;
+            $('div').scroll(function () {
+                var currentScrollPosition = $(this).scrollTop();
+                if (currentScrollPosition > lastScrollTop) {
+                    $('h3').text('scroll para baixo');
+                } else {
+                    $('h3').text('scroll para cima');
+                }
+                lastScrollTop = currentScrollPosition;
+            });
+        });
+    </script>
+</head>
+<body style="font-family:Arial">
+    <div style="width:300px; height:200px; border:1px solid black; overflow:scroll">
+        PRAGIM Especialidade na área de treinamento diferente de outras instituições de treinamento. Treinamento ministrado por especialistas em software em tempo real com mais de 10 anos de experiência. Perguntas da entrevista e discussão de cenários em tempo real sobre os tópicos abordados no dia. Discussão de projetos em tempo real relacionados às possíveis perguntas da entrevista. Os estagiários podem participar de treinamentos e utilizar o laboratório até conseguir um emprego. Retomar a preparação e simular entrevistas. 100% de assistência de colocação. Laboratório 24 horas. A PRAGIM Technologies oferece projetos profissionais em tempo real para alunos em seu último semestre. Certificados de conclusão do curso e de conclusão do projeto também serão fornecidos após a conclusão bem-sucedida do curso. Temos parceria com grandes empresas multinacionais para colocar calouros com nossos clientes na conclusão do curso.
+    </div>
+    <br />
+    <h3 style="display:inline; color:red"></h3>
+</body>
+</html>

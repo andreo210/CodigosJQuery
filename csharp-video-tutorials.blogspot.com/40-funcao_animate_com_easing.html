@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myImage').on({
+                mouseover: function () {
+                    $(this).animate({
+                        'height': 400,
+                        'width': 400,
+                    }, 3000);
+                },
+                mouseout: function () {
+                    $(this).animate({
+                        'height': 100,
+                        'width': 100,
+                    }, 3000);
+                }
+            });
+        });
+    </script>
+</head>
+<body style="font-family:Arial">
+    <img id="myImage" height="100" width="100" src="/csharp-video-tutorials.blogspot.com/images/Tulips.jpg" />
+</body>
+</html>

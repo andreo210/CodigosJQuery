@@ -1,0 +1,49 @@
+<html>
+<head>
+    <style type="text/css">
+        .imgStyle {
+            width: 100px;
+            height: 100px;
+            border: 3px solid grey;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#divId img').on({
+                mouseover: function () {
+                    $(this).css({
+                        'cursor': 'hand',
+                        'border-Color': 'red'
+                    });
+                },
+                mouseout: function () {
+                    $(this).css({
+                        'cursor': 'default',
+                        'border-Color': 'grey'
+                    });
+                },
+                click: function () {
+                    var imageURL = $(this).attr('src');
+                    $('#mainImage').fadeOut(1000, function () {
+                        $(this).attr('src', imageURL);
+                    }).fadeIn(1000);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <img id="mainImage" style="border:3px solid grey"
+         src="/csharp-video-tutorials.blogspot.com/images/Hydrangeas.jpg" height="500" width="540" />
+    <br />
+    <div id="divId">
+        <img class="imgStyle" src="/csharp-video-tutorials.blogspot.com/images/Hydrangeas.jpg" />
+        <img class="imgStyle" src="/csharp-video-tutorials.blogspot.com/images/Jellyfish.jpg" />
+        <img class="imgStyle" src="/csharp-video-tutorials.blogspot.com/images/Koala.jpg" />
+        <img class="imgStyle" src="/csharp-video-tutorials.blogspot.com/images/Penguins.jpg" />
+        <img class="imgStyle" src="/csharp-video-tutorials.blogspot.com/images/Tulips.jpg" />
+    </div>
+</body>
+</html>

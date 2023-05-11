@@ -1,0 +1,17 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#cbShowPassword').click(function () {
+                $('#txtPassword').attr('type', $(this).is(':checked') ? 'text' : 'password');
+            });
+        });
+    </script>
+</head>
+<body style="font-family:Arial">
+    Password :
+    <input type="password" id="txtPassword" />
+    <input type="checkbox" id="cbShowPassword" />Show password
+</body>
+</html>

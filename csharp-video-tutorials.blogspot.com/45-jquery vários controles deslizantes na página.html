@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+             $(document).ready(function () {
+    var outputSpan = $('#spanOutput');
+    var sliderDiv = $('#slider');
+
+    sliderDiv.slider({
+        range: true,
+        min: 18,
+        max: 100,
+        values: [20, 30],
+        slide: function (event, ui) {
+            outputSpan.html(ui.values[0] + ' - ' + ui.values[1] + ' Years');
+        },
+        stop: function (event, ui) {
+            $('#txtMinAge').val(ui.values[0]);
+            $('#txtMaxAge').val(ui.values[1]);
+        }
+    });
+
+    outputSpan.html(sliderDiv.slider('values', 0) + ' - '
+        + sliderDiv.slider('values', 1) + ' Years');
+    $('#txtMinAge').val(sliderDiv.slider('values', 0));
+    $('#txtMaxAge').val(sliderDiv.slider('values', 1));
+});
+
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="sliderHeight"></div>
+    <br />
+    <div id="sliderWidth"></div>
+    <br />
+    <div id="divOpacity"></div>
+    <br />
+    <div id="divDimensions"></div>
+    <br />
+    <img id="myImg" src="/csharp-video-tutorials.blogspot.com/images/Tulips.jpg"  style="width: 100px; height: 100px" />
+    <script>
+           
+
+    </script>
+</body>
+</html>

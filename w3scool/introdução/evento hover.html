@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#p1").hover(function(){//A primeira função é executada quando o mouse entra no elemento HTML e a segunda função é executada quando o mouse sai do elemento HTML
+    alert("voce está entrando no paragrafo!");
+  },
+  function(){
+    alert("tchau! voce está saindo");
+  }); 
+});
+</script>
+</head>
+<body>
+
+<p id="p1">This is a paragraph.</p>
+
+</body>
+</html>

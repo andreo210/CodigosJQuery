@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="http://api.jqueryui.com/theming/icons"></script>
+    
+<script>
+$(document).ready(function(){
+
+    $('input[type="checkbox"]').button().click(function () {
+    var isChecked = $(this).is(':checked') ? 'Checked' : 'Unchecked'
+    alert($(this).attr('id') + ' Checkbox ' + isChecked)
+});
+  
+});
+</script>
+
+
+
+</head>
+<body>
+    <input type="checkbox" id="Bold" /><label for="Bold">B</label>
+    <input type="checkbox" id="Underline" /><label for="Underline">U</label>
+    <input type="checkbox" id="Italic" /><label for="Italic">I</label>
+</body>
+</html>
